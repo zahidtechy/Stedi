@@ -224,23 +224,16 @@ Package version is `1.0.0` via `Directory.Build.props` (`VersionPrefix`). Change
 
 ## Publishing to NuGet
 
-Replace placeholders only. Never commit a NuGet API key.
+Store a nuget.org API key in the GitHub repository secret `NUGET_API_KEY`. Never commit the key.
+
+The GitHub Actions workflow `.github/workflows/nuget-publish.yml` publishes when you push a version tag:
 
 ```bash
-dotnet nuget push ./artifacts/Stedi.Healthcare.1.0.0.nupkg \
-  --api-key YOUR_NUGET_API_KEY \
-  --source https://api.nuget.org/v3/index.json
+git tag v1.0.0
+git push origin v1.0.0
 ```
 
-Store the NuGet API key in CI as `NUGET_API_KEY` or in a local secret manager. Do not put it in source, README files, or shell history if you can avoid it.
-
-The GitHub Actions workflow `.github/workflows/nuget-publish.yml` publishes when you push a tag such as `v1.0.0`.
-
-## Placeholders to replace before publishing
-
-- `YOUR_NAME` / `YOUR_COMPANY` in `Directory.Build.props` and `LICENSE`
-- `https://github.com/YOUR_ORG/Stedi.Healthcare` repository URLs
-- License text if MIT is not the license you want
+Package page after publish: https://www.nuget.org/packages/Stedi.Healthcare
 
 ## Updating OpenAPI models
 

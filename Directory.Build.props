@@ -7,11 +7,11 @@
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <Authors>YOUR_NAME</Authors>
-    <Company>YOUR_COMPANY</Company>
-    <Copyright>Copyright (c) YOUR_NAME</Copyright>
-    <RepositoryUrl>https://github.com/YOUR_ORG/Stedi.Healthcare</RepositoryUrl>
+    <Authors>zahidtechy</Authors>
+    <Company>Datavanced</Company>
+    <Copyright>Copyright (c) zahidtechy</Copyright>
+    <RepositoryUrl>https://github.com/zahidtechy/Stedi</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/YOUR_ORG/Stedi.Healthcare</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/zahidtechy/Stedi</PackageProjectUrl>
   </PropertyGroup>
 </Project>
