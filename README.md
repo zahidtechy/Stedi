@@ -14,7 +14,7 @@ dotnet add package Stedi.Healthcare --source https://nuget.pkg.github.com/zahidt
 
 GitHub Packages requires a GitHub username and a personal access token with `read:packages` when restoring.
 
-Once a `NUGET_API_KEY` repository secret is set, the same tag workflow also publishes to nuget.org:
+Once published to nuget.org:
 
 ```bash
 dotnet add package Stedi.Healthcare
@@ -234,7 +234,7 @@ Package version is `1.0.0` via `Directory.Build.props` (`VersionPrefix`). Change
 
 ## Publishing to NuGet
 
-Pushing a version tag runs `.github/workflows/nuget-publish.yml`. That workflow always publishes to GitHub Packages. It also publishes to nuget.org when the `NUGET_API_KEY` repository secret is set. Never commit the key.
+Pushing a version tag (or running **nuget-publish** manually) publishes to GitHub Packages and nuget.org. nuget.org uses Trusted Publishing for account `zahid94` from the `production` GitHub Environment — no long-lived API key is stored in the repo.
 
 ```bash
 git tag v1.0.0
