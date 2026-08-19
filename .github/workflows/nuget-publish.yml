@@ -19,9 +19,9 @@ jobs:
         with:
           dotnet-version: "6.0.x"
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore Stedi.Healthcare.sln
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build Stedi.Healthcare.sln -c Release --no-restore
       - name: Pack
         run: dotnet pack src/Stedi.Healthcare/Stedi.Healthcare.csproj -c Release --no-build --no-restore -o artifacts
       - name: Push to GitHub Packages
