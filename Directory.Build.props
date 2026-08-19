@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>10.0</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>YOUR_NAME</Authors>
+    <Company>YOUR_COMPANY</Company>
+    <Copyright>Copyright (c) YOUR_NAME</Copyright>
+    <RepositoryUrl>https://github.com/YOUR_ORG/Stedi.Healthcare</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/YOUR_ORG/Stedi.Healthcare</PackageProjectUrl>
+  </PropertyGroup>
+</Project>
